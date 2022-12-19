@@ -1,0 +1,138 @@
+@import '../variables';
+
+.header {
+  width: 100%;
+  display: flex;
+  border-bottom: 1px solid $gray-line;
+  padding: 40px 0;
+  flex: 0 0 auto;
+
+  .container {
+    display: flex;
+    align-items: center;
+
+    &__left {
+      display: flex;
+      flex : 1;
+      align-items: center;
+      justify-content: flex-start;
+
+      @media (max-width: 1300px) {
+        display: none;
+      }
+    }
+
+    &__right {
+      display: flex;
+      flex : 1;
+      align-items: center;
+      justify-content: flex-end;
+      user-select: none;
+      &-auth{
+        margin-left: 5%;
+        justify-content: space-between;
+
+        @media (max-width: 900px)
+        {
+          margin-left: 0;
+        }
+      }
+
+      .profile-icon{
+        height: 50px;
+      }
+
+      .item{
+        font-size: 20px;
+        color: $black;
+        font-weight: bold;
+        cursor: pointer;
+        padding-left: 5px;
+        padding-right: 5px;
+        &:hover{
+          color: $active;
+        }
+      }
+
+      @media (max-width: 900px) {
+        flex-direction: column;
+        flex-wrap: wrap;
+      }
+
+      @media (max-width: 650px) {
+        flex-direction:row;
+        justify-content: center;
+      }
+    }
+
+    &__center {
+      display: flex;
+      flex : 1;
+      align-items: center;
+      justify-content: center;
+
+      &__search{
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        position: relative;
+        flex: 1;
+        background: #fff;
+        height: 80%;
+        border-radius: 30px;
+        
+        cursor: pointer;
+        box-shadow:  4px 4px 6px 0 $active,
+                  -4px -4px 6px 0 rgba(255,255,255,.2), 
+        inset -4px -4px 6px 0 rgba(255,255,255,.2),
+        inset 4px 4px 6px 0 rgba(0, 0, 0, .2);
+
+        &-input{
+            display: flex;
+            flex: 0.9;
+            padding: 10px;
+            background: transparent;
+            border: none;
+            outline:none;
+            font-weight: 500;
+            font-size: 24px;
+            color: $black;
+
+            @media (max-width: 420px) {
+              font-size: 18px;
+            }
+        }
+        
+        .icon{
+          position: absolute;
+          right: 15px;
+          cursor: pointer;
+          width: 20px;
+          height: 20px;
+          opacity: 0.3;
+        }
+      }
+    }  
+
+    @media (max-width: 650px) {
+      flex-direction: column-reverse;
+    }
+  }
+
+
+  &__logo {
+    display: flex;
+
+    h1 {
+      color: #181818;
+      font-size: 24px;
+      letter-spacing: 1%;
+      text-transform: uppercase;
+      font-weight: 800;
+    }
+
+    p {
+      color: #7b7b7b;
+    }
+  }
+}

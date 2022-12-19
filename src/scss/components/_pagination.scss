@@ -1,0 +1,77 @@
+@import '../variables';
+
+.simple-pag-wrapper{
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    justify-content: space-around;
+    align-items: center;
+
+    .pagination-link-arr{
+        width: 40px;
+        line-height: 40px;
+        height: 30px;
+        background-color: #fff;
+        cursor: pointer;
+        color: $background;
+        user-select: none;
+    }
+
+}
+
+.pagination-wrapper{
+    display:  flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 30px 0;
+    
+    .pagination{
+        display: inline-flex;
+        
+        align-items: center;
+        justify-content: center;
+        border-radius: 1rem;
+        box-shadow:  1px 0.5rem 1rem $background;
+        padding: 10px 30px;
+
+        .active {
+            background-color: $background;
+            .pagination-link{color: #fff;}
+        }
+
+        &-item
+        {
+            border-radius: 50%;
+            margin: 0 6px;
+
+            &:hover{
+                background: $background;
+                .pagination-link{color: #fff;}  
+            }
+
+            .pagination-link{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 40px;
+                line-height: 40px;
+                text-align: center;
+                font-size: 20px;
+                color: $background;
+                user-select: none;
+            }
+
+            .pagination-link-arr{
+                width: 40px;
+                line-height: 40px;
+                height: 30px;
+                text-align: center;
+                font-size: 20px;
+                background-color: #fff;
+                cursor: pointer;
+                color: $background;
+                user-select: none;
+            }
+        }
+    }
+}

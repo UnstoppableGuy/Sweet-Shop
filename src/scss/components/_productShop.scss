@@ -1,0 +1,58 @@
+@import '../variables';
+
+.productShop-block {
+    display: flex;
+    flex-direction: column;
+    border: 0.1rem solid ;
+    border-radius: 1rem ;
+    margin: 1rem;
+    border: none;
+    box-shadow: 0 2px 16px $background;
+    width: 200px;
+    text-align: center;
+  
+    &__image {
+      width: 170px;
+      height: 200px;
+      border-radius: 2rem ;
+  
+      padding: 5%;
+      user-select: none;
+    }
+}
+
+.productShop-btn{
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+    
+
+    .path-c{
+        fill: #333333;
+    }
+
+    &:hover{
+        .path-c{
+            fill: $active;
+        }
+    }
+}
+
+.productShop-btn-small{
+    height: 20px;
+    width: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    
+
+    .path-c{
+        fill: #333333;
+    }
+
+    &:hover{
+        .path-c{
+            fill: $active;
+        }
+    }
+}
+  

@@ -1,0 +1,505 @@
+@import '../variables';
+
+.details{
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+
+
+    &-top{
+        display: flex;
+        flex-direction: row;
+        margin: 0 5%;
+
+        &__left{
+            display: flex;
+            flex: 1;
+            justify-content: flex-start;
+            flex-direction: column;
+
+            .details-image{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                user-select: none;
+
+                &__block{
+                    display: flex;
+                    width: 90%;
+                    margin: 10px;
+                    border-radius: 1rem;
+                    box-shadow:  0 0.5rem 1rem $background;
+                }
+                
+                &__small-group{
+                    display: flex;
+                    justify-content: space-between;                    
+                    flex-direction: row;
+                    width: 90%;
+                    border-radius: 1rem;
+        
+                    .active{
+                        box-shadow:  0 0.1rem 0.2rem $active;
+                    }
+
+                    .small-img-col{
+                        flex-basis: 24%;
+                        cursor: pointer; 
+                        border: 0.1rem solid $gray-line;
+                        border-radius: 1rem;
+                        
+                        .small-img{
+                            width: 100%;
+                            border-radius: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__right{
+            display: flex;
+            flex: 2;
+            justify-content: flex-start;
+            flex-direction: column;
+
+            .details-container{
+                display: flex;
+                padding-left: 5%;
+                justify-content: flex-start;
+                flex-direction: column;
+
+                .product-rating{
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    flex-direction: row;
+                }
+
+                .name{
+                    font-size: 40px;
+                    font-weight: bold;
+                    font-style: normal;
+                    padding-top: 5%;
+                    
+                }
+    
+                .tags{
+                    font-size: 16px;
+                    font-style: italic;
+                    font-weight: 500;
+                }
+    
+                .price{
+                    font-size: 42px;
+                    font-style: normal;
+                    font-weight: bold;
+                    color: $black;
+                    padding-top: 3%;
+                }
+    
+                .details-header{
+                    font-size: 32px;
+                    font-style: normal;
+                    font-weight: bold;
+                    margin-bottom: 2%;
+                }
+    
+                .details-info{
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    margin-bottom: 3%;
+                }
+    
+                .vendor{
+                    font-weight: bold;
+                    font-style: normal;
+                    margin-top: 3%;
+                    margin-bottom: 3%;
+    
+                    &-name,
+                    &-address,
+                    &-description{
+                        padding-left: 1%;
+                        padding-top: 1%;
+                        padding-bottom: 1%;
+                        font-size: 16px;
+                        font-style: italic;
+                        font-weight: normal;
+                    }
+
+                }
+            }
+
+            
+        }
+    }
+
+    &-center{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3%;
+        margin-bottom: 3%;
+
+        border-bottom: 3px solid $gray-line;
+        border-top: 3px solid $gray-line;
+        
+        .sugg-grid{
+            display: flex;  
+            justify-content: space-around;
+            flex-wrap: wrap;
+
+            .small-product{
+                display: flex;
+                flex-direction: column;
+                border: 0.1rem solid ;
+                border-radius: 1rem ; 
+                border-color: $gray-line;
+                text-align: center;
+                margin: 1rem;
+                
+                &__image {
+                    width: 200px;
+                    height: 200px;
+                    border-radius: 2rem ;
+                
+                    padding: 5%; 
+                    user-select: none;
+                }
+
+                &__title {
+                    font-size: 15px;
+                    font-weight: 900;
+                    letter-spacing: 1%;
+                    margin-bottom: 5px;
+                }
+
+                &__bottom {
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    margin-top: 5px;
+                    margin-bottom: 5px;
+                
+                  }
+                
+                  &__price {
+                    font-weight: bold;
+                    font-size: 22px;
+                    line-height: 27px;
+                    letter-spacing: 0.015em;
+                  }
+            }
+
+        }
+    }
+
+    &-bottom{
+        display: flex;
+        flex-direction: row;
+        margin: 0 5%;
+        margin-top: 3%;
+        margin-bottom: 5%;
+        color: $black;
+
+        &__left{
+            display: flex;
+            flex: 1;
+            padding: 0 3%;
+            // justify-content: fce;
+            flex-direction: column;
+
+            .comments-header{
+                display: flex;
+                // justify-content: center;
+                margin-bottom: 30px;
+    
+                &-title{
+                    font-size: 24px;
+                    font-weight: bold;
+                    padding: 0;
+                }
+
+                &-tabs{
+                    display: flex;
+
+                    &__col{
+                        flex: 1;
+                        margin-right: 1rem;
+                        font-size: 30px;
+
+                    }
+
+                }
+            }
+        }    
+
+        &__right{
+            display: flex;
+            flex: 2;
+            justify-content: flex-start;
+            flex-direction: column;
+
+            .comments-header{
+                margin-bottom: 30px;
+
+                &-tabs{
+                    display: flex;
+
+                    &__col{
+                        // flex: 1;
+                        display: flex;
+                        justify-content: center;
+                        padding-top: 5px;
+                        margin-right: 1rem;
+                        font-size: 18px;
+                        cursor: pointer;
+
+                        &:hover{
+                            border-bottom: 2px solid $halfVisible;
+                        }
+                    }
+
+                    .col-active{
+                        border-bottom: 2px solid $active;
+
+                        &:hover{
+                            border-bottom: 2px solid $halfVisible;
+                        }
+                    }
+                }
+            }
+
+            .review-block{
+                display: block;
+                align-items: center;
+                padding-top: 20px;
+                padding-bottom: 10px;
+                
+                .review-group{
+                    display: flex;
+                    flex-direction: column;
+                    font-size: 16px;
+                    line-height: 23px;
+
+                    &__header-line{
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        margin-bottom: 5px;
+
+                        .person{
+                            font-size: 15px;
+                            font-style: italic;
+                            font-weight: 600;
+                            margin-right: 10px;        
+                        }
+
+                        .date{
+                            font-size: 13px;
+                        }
+                    }
+                    
+                    &__review-wrapper{
+                        display: flex;
+                        flex-direction: row;
+
+                        .review-text{
+                            display: flex;
+                            flex: 2;
+                            font-size: 14px;
+                            font-weight: 500;
+                            word-wrap: break-word;
+                        }
+    
+                        .additional{
+                            display: flex;
+                            flex: 1;
+                            font-size: 14px;
+                        }
+                    }       
+                }
+            }
+
+            .new-review{
+                display:  flex;
+                justify-content: flex-start;
+                font-size: 15px;
+                flex-direction: column;
+
+                .state-btn{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;    
+                    width: 70%;
+                    padding: 0 30px;
+                    margin-bottom: 3%;
+                    margin-top: 3%;
+                    background-color: $main7;
+                    color: #fff;
+                    height: 50px;
+                    cursor: pointer;
+
+                    .text{
+                        font-size: 15px;
+                        font-style: italic;
+                        font-weight: 500;
+                    }
+                }
+
+                .newform-container  {
+                    display: none;
+                    width: 70%;
+                    box-shadow:  0 0.5rem 1rem $background;
+
+                    &__nav-container{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        border-bottom: 1px solid $form-border;
+
+                        .feedback-container{
+                            display: flex;
+                            justify-content: space-around;
+                            flex-direction: row;
+                            align-items: center;
+                            flex-wrap: nowrap;
+                            padding: 0 10px;
+                        }
+
+                        .text{
+                            padding: 5px 0;
+                            margin: 0 10px;
+                            font-size: 15px;  
+                            cursor: pointer;
+                        }
+
+                        .active-text{
+                            border-bottom: 3px solid $active;
+                        }
+                        
+                        
+                    }
+
+                    .review-form{
+                        padding: 15px 5px;
+                        
+                        .inp{
+                            width: 100%;
+                            height: 100%;
+                            border: none;
+                            overflow: hidden;
+                            min-height: 100px;
+                            resize: none;
+                            border-bottom: 1px solid $form-border;
+                        }
+
+                        .star-rating{
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: flex-start;
+                            align-items: center;
+                            font-size: 15px;
+                            padding-top: 2%;
+                            margin-bottom: 2%;
+                            
+                        }
+
+                        .form-footer{
+                            display: flex;
+                            justify-content: space-between;
+                            flex-direction: row;
+                            align-items: center;
+
+                            
+
+                            .send-btn{
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                color: #fff;
+                                border: none;
+                                padding: 5px;
+                                border-radius: 1rem;
+    
+                                background: $main6;
+
+                                &:hover{
+                                    background-color: $active;
+                                }
+                            }
+                            
+                        }
+
+                        .form-footer-comment{
+                            justify-content: flex-end;
+                        }
+                    }
+
+                }
+            }
+        
+
+        } 
+    }
+}
+
+.review-block2{
+    display: block;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    
+    .review-group2{
+        display: flex;
+        flex-direction: column;
+        font-size: 16px;
+        line-height: 23px;
+        
+
+        &__header-line2{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 5px;
+
+            .person2{
+                font-size: 15px;
+                font-style: italic;
+                font-weight: 600;
+                margin-right: 10px;        
+            }
+
+            .date2{
+                font-size: 13px;
+            }
+        }
+        &__review-wrapper2{
+            display: flex;
+            flex-direction: row;
+        border-bottom: 2px solid $halfVisible;
+
+
+            .review-text2{
+                display: flex;
+                flex: 2;
+                font-size: 14px;
+                font-weight: 500;
+                word-wrap: break-word;
+                cursor: pointer;
+            }
+
+            .additional2{
+                display: flex;
+                flex: 1;
+                font-size: 14px;
+            }
+        }    
+    }
+}
+
